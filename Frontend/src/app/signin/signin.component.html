@@ -1,0 +1,43 @@
+<app-spinner></app-spinner>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+<div class="contain">
+    <div class="container"  [class.right-panel-active]="rightPanelActive" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                
+                
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form [formGroup]="signinForm">
+                <h1 class="animated-title"> Bienvenue !</h1>
+                
+                <input type="text" formControlName="username" placeholder=" Email " />
+                <input type="password" formControlName="password" placeholder="Mot de passe" />
+                <a href="#">Mot de passe oublié ?</a>
+                <button (click)="login()">Se Connecter</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    
+                    <button class="ghost" (click)="toggleRightPanel()" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    
+                    <p>Etre un client fidele et créer votre compte privé</p>
+                    <button class="ghost" (click)="toggleRightPanel()" id="signUp">S'inscrire</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+

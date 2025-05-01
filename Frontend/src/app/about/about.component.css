@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+
+
+/* Partie droite */
+.right-section {
+  width: 100%; /* S'assure que la section occupe toute la largeur disponible */
+  padding: 100px 70px; /* Ajoute du padding pour éviter que le contenu touche les bords */
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4; /* Couleur de fond légèrement différente pour la section */
+}
+
+/* Partie droite avec animation de translation au chargement de la page */
+/* Partie droite avec animation de translation du bas vers le haut au chargement de la page */
+.right-top-description {
+  height: auto;
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e2d2b267;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.501);
+  margin-bottom: 100px;
+  width: 500px;
+  
+  /* Animation du bas vers le haut au chargement */
+  animation: translateUp 1.5s ease-out; /* Applique l'animation en 1 seconde */
+}
+.right-top-description p {
+  font-size: 1rem; /* Taille de police */
+  color: #fff; /* Couleur du texte blanc */
+  font-weight: 700; /* Poids de la police */
+  line-height: 1; /* Espacement entre les lignes */
+  text-align: center; /* Centrer le texte */
+  margin-top: -10px; /* Espacement au-dessus du texte */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3); /* Ombre douce pour donner du relief au texte */
+  letter-spacing: 0.5px; /* Espacement entre les lettres pour plus de lisibilité */
+  
+  /* Animation pour l'effet d'apparition */
+  animation: fadeInUp 1.5s ease-out;
+}
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Déplace le texte de bas en haut */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Animation de translation du bas vers le haut */
+@keyframes translateUp {
+  0% {
+    transform: translateY(35px); /* Commence depuis le bas (déplacement de 100px vers le bas) */
+    opacity: 0; /* Commence avec l'élément invisible */
+  }
+  100% {
+    transform: translateY(20); /* L'élément atteint sa position finale (en haut) */
+    opacity: 1; /* Devient complètement visible */
+  }
+}
+
+
+/* Animation de translation du texte dans le titre */
+.right-top-description h1::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 37%;
+  transform: translateX(-43%);
+  width: 0;
+  height: 5px;
+  
+  background-color: rgb(229, 185, 11);
+  border-radius: 30px;
+  box-shadow: 0px 0px 9px rgba(235, 225, 225, 0.711);
+  animation: underlineAnimation 2s ease-in-out forwards;
+}
+@keyframes translateUp {
+  0% {
+    transform: translateY(0px); /* Démarre plus bas que sa position normale */
+    opacity: 0; /* Démarre invisible */
+  }
+  100% {
+    transform: translateY(0); /* Position finale, aligné avec sa position normale */
+    opacity: 1; /* Devient visible */
+  }
+}
+
+/* Animation du soulignement */
+@keyframes underlineAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 380px; /* La largeur finale du soulignement */
+  }
+}
+
+.right-top-description h1 {
+    position: relative;
+    font-size: 40px;
+    color: #0be574;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    text-shadow: 7px 0px 5px rgba(255, 255, 255, 0.405);
+    display: inline-block;
+    padding: 0px 0px;
+    animation: translateUp 1s ease-out forwards;
+    margin-left: 5%; 
+    margin-top: 20px;
+    line-height: 1;
+}
+
+
+
+
+/* Cartes promos avec réduction */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grille responsive */
+  gap: 35px; /* Espacement entre les cartes */
+}
+
+.service-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.501);
+  text-align: center;
+  padding: 10px;
+  gap: 30px;
+  transition: transform 1.2s ease;
+  transform: translateY(10px); /* Positionne la carte en bas initialement */
+  animation: translateUp 1.8s ;
+}
+@keyframes translateUp {
+  0% {
+    opacity: 0;
+    transform: translateY(35px); /* Carte commence en bas */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-15); /* Carte arrive à sa position d'origine */
+  }
+}
+.service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+  width: 170px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 80px;
+}
+
+.service-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.old-price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+}
+
+.old-price del {
+  font-size: 2rem;
+  color: #ff0000;
+}
+
+.new-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e8b57;  /* Vert pour le prix actualisé */
+}
+
+/* Badge de réduction */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  background-color: #e01414;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 22px 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promo-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-square,
+  .right-top-description {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
