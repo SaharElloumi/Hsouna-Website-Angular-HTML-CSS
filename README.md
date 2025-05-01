@@ -1,5 +1,5 @@
 # Hsouna+
-![Homepage](../../assets/images/bg/homepage.png)
+![Acceuil](Frontend/src/assets/images/bg/acceuil.png)
 
 ## Getting Started
 This project is a simple fast food ordering website powered by Angular 17 on the frontend.
