@@ -1,17 +1,25 @@
 # Hsouna+
-
+![Homepage](../../assets/images/bg/homepage.png)
 
 ## Getting Started
-This project is a simple e-commerce website powered by Angular 17 on the frontend.
+This project is a simple fast food ordering website powered by Angular 17 on the frontend.
 
 ## About This Project
-You can browse items or select an item from the showcase.
-You can store your information for faster purchase.
-You can view your orders.
-You can add items to your cart 
-You can track your item delivery 
-You can search items.
-Buyers and sellers can communicate through a chat system
+Hsouna_Plus allows users to:
+
+- Browse a dynamic food menu (burgers, drinks, desserts, etc.)
+
+- View current promotions on a dedicated page
+
+- Add items to their shopping cart
+
+- Fill out a delivery form (name, address, phone) to place orders
+
+- Use a check-in feature for in-restaurant service or takeaway
+
+- Enjoy a modern, responsive UI optimized for desktop and mobile
+This project showcases a lightweight and user-friendly fast food e-commerce interface.
+
 # Setting the project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.

@@ -4,7 +4,7 @@
   
   "newProjectRoot": "projects",
   "projects": {
-    "Hsouna Plus": {
+    "Hsouna_Plus": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -14,7 +14,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Hsouna Plus",
+            "outputPath": "dist/Hsouna_Plus",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Hsouna Plus:build:production"
+              "browserTarget": "Hsouna_Plus:build:production"
             },
             "development": {
-              "browserTarget": "Hsouna Plus:build:development"
+              "browserTarget": "Hsouna_Plus:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Hsouna Plus:build"
+            "browserTarget": "Hsouna_Plus:build"
           }
         },
         "test": {
